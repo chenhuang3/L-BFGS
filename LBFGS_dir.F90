@@ -10,8 +10,8 @@
 !
 ! output:
 !  q: L-BFGS direction
-!  x: historical x are updated on exit
-!  g: historical g are updated on exit
+!  x: updated on exit
+!  g: updated on exit
 !
 ! based on
 !   https://github.com/GuipengLi/optLBFGS/blob/master/optLBFGS.m
