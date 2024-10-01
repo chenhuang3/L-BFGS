@@ -42,7 +42,7 @@ subroutine lbfgs_dir(ndim,mhist,iter,g0,x0,g,x,q)
   ! following Wikipedia
   ! https://en.wikipedia.org/wiki/Limited-memory_BFGS#Algorithm
 
-  ! update historical x and g
+  ! update historical x and g arrays, 
   ! 1,2,...,m are historical x and g
   do i=1,mhist
     x(:,i) = x(:,i+1)
@@ -52,13 +52,7 @@ subroutine lbfgs_dir(ndim,mhist,iter,g0,x0,g,x,q)
   x(:,mhist+1) = x0
   g(:,mhist+1) = g0
 
-
-  if (mhist >= iter-1) then
-    m = iter-1
-  else
-    m = mhist
-  endif
-
+  m = min(iter-1, mhist)
 
   if (m==0) then
     q = -g0
