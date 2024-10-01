@@ -1,12 +1,14 @@
 !
 ! compute L-BFGS direction
 !
-!  iter        : outer iteration number, starting from 1
+!  ndim        : dimension of the problem 
 !  mhist       : number of historical iterations
+!  iter        : outer iteration number, should start from 1.
+!  x0          : current x
+!  g0          : current gradient at x
 !  x(:,1:m+1)  : working array, store m+1 previous x
 !  g(:,1:m+1)  : working array, store m+1 previous g
-!  x0          : current x
-!  g0          : current g
+
 !
 ! output:
 !  q: L-BFGS direction
