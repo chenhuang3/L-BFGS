@@ -5,7 +5,7 @@
 !  mhist       : number of historical iterations
 !  iter        : outer iteration number, should start from 1.
 !  x0          : current x
-!  g0          : current gradient at x
+!  g0          : gradient at x
 !  x(:,1:m+1)  : working array, store m+1 previous x
 !  g(:,1:m+1)  : working array, store m+1 previous g
 
