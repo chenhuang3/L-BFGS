@@ -8,7 +8,6 @@
 !  g0          : gradient at x
 !  x(:,1:m+1)  : working array, store m+1 previous x
 !  g(:,1:m+1)  : working array, store m+1 previous g
-
 !
 ! output:
 !  q: L-BFGS direction
