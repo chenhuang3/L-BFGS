@@ -2,12 +2,12 @@
 ! compute L-BFGS direction
 !
 !  ndim        : dimension of the problem 
-!  mhist       : number of historical iterations
+!  mhist       : number of historical iterations for computing l-bfgs direction
 !  iter        : outer iteration number, should start from 1.
 !  x0          : current x
 !  g0          : gradient at x
-!  x(:,1:m+1)  : working array, store m+1 previous x
-!  g(:,1:m+1)  : working array, store m+1 previous g
+!  x(:,1:m+1)  : working array, store m+1 previous x, automatically updated
+!  g(:,1:m+1)  : working array, store m+1 previous g, automatically updated
 !
 ! output:
 !  q: L-BFGS direction
@@ -17,7 +17,7 @@
 ! based on
 !   https://github.com/GuipengLi/optLBFGS/blob/master/optLBFGS.m
 !
-!   See Alg. 3 in "A Stochastic Quasi-Newton Method for Online Convex Optimization", N.N. Schraudolph et al.
+!   also, see Alg. 3 in "A Stochastic Quasi-Newton Method for Online Convex Optimization", N.N. Schraudolph et al.
 !     Proceedings of Machine Learning Research, 2:436-443, (2007)
 !     http://proceedings.mlr.press/v2/schraudolph07a.html
 !
